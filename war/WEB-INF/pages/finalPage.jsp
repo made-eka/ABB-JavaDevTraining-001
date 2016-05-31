@@ -1,4 +1,5 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<% response.addHeader("Refresh","5"); %>
 <c:url var="resources" value="/resources/theme1" scope="request" />
 
 <html>
