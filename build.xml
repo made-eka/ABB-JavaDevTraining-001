@@ -30,7 +30,6 @@
 	
 	<!-- Create source and destination folders -->
     <target name="init">
-        <mkdir dir="${src.dir}" />
         <mkdir dir="${target.dir}" />
         <mkdir dir="${web.classes.dir}" />
     </target>
