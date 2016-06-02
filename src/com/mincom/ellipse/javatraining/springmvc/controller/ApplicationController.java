@@ -16,6 +16,9 @@ public class ApplicationController {
  
 	private static final String INDEX_PAGE_KEY = "index";
 	private static final String FINAL_PAGE_KEY = "finalPage";
+	private static final String ERROR_PAGE_KEY = "errorPage";
+	
+	
 	private final String MESSAGE_MAP_KEY = "input_message";
 	private final static Logger logger = LoggerFactory.getLogger(ApplicationController.class);
  
@@ -32,9 +35,7 @@ public class ApplicationController {
 	@RequestMapping(value = "/{input}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String input, ModelMap model) {
  
-		model.addAttribute(MESSAGE_MAP_KEY, "Hi " + input + "! \nWelcome, Namaste, Willkommen...");
-		logger.debug("Displaying page with input message : {}", input);
-		return INDEX_PAGE_KEY;
+		return ERROR_PAGE_KEY;
  
 	}
 	
@@ -44,5 +45,12 @@ public class ApplicationController {
 		
 		return FINAL_PAGE_KEY;
 	}
- 
+
+	@RequestMapping(value = "/back", method = RequestMethod.GET)
+	public String back(ModelMap model) {
+
+		model.addAttribute(MESSAGE_MAP_KEY, "");
+		return INDEX_PAGE_KEY;
+	}
+
 }
