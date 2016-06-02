@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class ApplicationController {
  
 	private static final String INDEX_PAGE_KEY = "index";
+	private static final String ERROR_PAGE_KEY = "errorPage";
 	private static final String FINAL_PAGE_KEY = "finalPage";
 	private final String MESSAGE_MAP_KEY = "input_message";
 	private final static Logger logger = LoggerFactory.getLogger(ApplicationController.class);
@@ -32,11 +33,12 @@ public class ApplicationController {
 	@RequestMapping(value = "/{input}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String input, ModelMap model) {
  
-		model.addAttribute(MESSAGE_MAP_KEY, "Hi " + input + "! \nWelcome, Namaste, Willkommen...");
+		model.addAttribute(MESSAGE_MAP_KEY,  "Error Babe!");
 		logger.debug("Displaying page with input message : {}", input);
-		return INDEX_PAGE_KEY;
+		return ERROR_PAGE_KEY;
  
 	}
+
 	
 	@RequestMapping(value = "/finalPage", method = RequestMethod.GET)
 	public String finalPage(ModelMap model) {
@@ -44,5 +46,12 @@ public class ApplicationController {
 		
 		return FINAL_PAGE_KEY;
 	}
- 
+
+	@RequestMapping(value = "/backPage", method = RequestMethod.GET)
+	public String backPage(ModelMap model) {
+		model.addAttribute(MESSAGE_MAP_KEY, "Back from the dead" );
+		
+		return INDEX_PAGE_KEY;
+	}
+	
 }
