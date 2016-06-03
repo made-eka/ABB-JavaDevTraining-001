@@ -16,6 +16,7 @@ public class ApplicationController {
  
 	private static final String INDEX_PAGE_KEY = "index";
 	private static final String FINAL_PAGE_KEY = "finalPage";
+	private static final String ERROR_PAGE_KEY = "errorPage";
 	private final String MESSAGE_MAP_KEY = "input_message";
 	private final static Logger logger = LoggerFactory.getLogger(ApplicationController.class);
  
@@ -31,11 +32,13 @@ public class ApplicationController {
  
 	@RequestMapping(value = "/{input}", method = RequestMethod.GET)
 	public String welcomeName(@PathVariable String input, ModelMap model) {
- 
-		model.addAttribute(MESSAGE_MAP_KEY, "Hi " + input + "! \nWelcome, Namaste, Willkommen...");
-		logger.debug("Displaying page with input message : {}", input);
-		return INDEX_PAGE_KEY;
- 
+		
+		if (input.isEmpty()) {
+			return INDEX_PAGE_KEY;
+		} 
+		
+		model.addAttribute(MESSAGE_MAP_KEY, "Your request is prohibited!");
+		return ERROR_PAGE_KEY;
 	}
 	
 	@RequestMapping(value = "/finalPage", method = RequestMethod.GET)
@@ -43,6 +46,13 @@ public class ApplicationController {
 		model.addAttribute(MESSAGE_MAP_KEY, "This is the final message to The Final Page" );
 		
 		return FINAL_PAGE_KEY;
+	}
+	
+	@RequestMapping(value = "/toIndex", method = RequestMethod.GET)
+	public String toIndexPage(ModelMap model) {
+		model.addAttribute(MESSAGE_MAP_KEY, "Welcome back!" );
+		
+		return INDEX_PAGE_KEY;
 	}
  
 }

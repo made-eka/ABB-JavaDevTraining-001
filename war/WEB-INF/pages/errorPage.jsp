@@ -4,12 +4,13 @@
 <c:url var="resources" value="/resources/theme1" scope="request" />
 
 <html>
-    <head>
-        <link href="${resources}/css/core.css" rel="stylesheet">
-    </head>
-    <body>
-        <abb_h1>The Final Page</abb_h1><br>
-        <abb_h2>${input_message}</abb_h2>
+<head>
+<link href="${resources}/css/core.css" rel="stylesheet">
+</head>
+<body>
+	<abb_h1>This is Error Page!</abb_h1><br>	
+	<abb_h2>${input_message}</abb_h2>
+	<table>
         <form:form method="GET" action="/ABBJavaDev-SpringMVC/toIndex">
             <table>
                 <tr>
@@ -17,5 +18,6 @@
 			    </tr>
 			</table>  
 		</form:form>
-    </body>
+	</table>
+</body>
 </html>
