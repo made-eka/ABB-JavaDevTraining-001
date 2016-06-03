@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * The controller class for the Spring application.
+ * @author IDMAYUD
+ */
 @Controller
 public class ApplicationController {
  
