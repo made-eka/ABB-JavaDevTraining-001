@@ -10,12 +10,12 @@
     <body>
         <abb_h1>Come On... That's incorrect URL!!</abb_h1><br>
         <abb_h2>${input_message}</abb_h2>
-        <form:form method="GET" action="/ABBJavaDev-SpringMVC/backPage">
-            <table>
+        <table>
+            <form:form method="GET" action="/ABBJavaDev-SpringMVC/backPage">
                 <tr>
                     <td><input type="submit" value="Back Page"/></td>
-			    </tr>
-			</table> 
-		</form:form>	 
+                </tr>
+            </form:form>
+        </table> 
     </body>
 </html>
