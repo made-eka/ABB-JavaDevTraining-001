@@ -14,8 +14,8 @@
             <table>
                 <tr>
                     <td><input type="submit" value="Back"/></td>
-			    </tr>
-			</table>  
-		</form:form>
+                </tr>
+            </table>  
+         </form:form>
     </body>
 </html>
