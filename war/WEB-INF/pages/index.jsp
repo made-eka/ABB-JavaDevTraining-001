@@ -8,7 +8,7 @@
 <link href="${resources}/css/core.css" rel="stylesheet">
 </head>
 <body>
-	<abb_h1>ABB Java Development Training</abb_h1><br>
+	<abb_h1>ABB Java Development Training TEST</abb_h1><br>
 	<abb_h2>Ant-Ivy-Spring MVC Training</abb_h2><br>
 	
 	<table>
