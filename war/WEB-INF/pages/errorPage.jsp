@@ -7,7 +7,7 @@
         <link href="${resources}/css/core.css" rel="stylesheet">
     </head>
     <body>
-        <abb_h1>The Final Pages</abb_h1><br>
+        <abb_h1>The Error Pages</abb_h1><br>
         <abb_h2>${input_message}</abb_h2>
         
         <input type="button" value="Back" onclick="window.location.assign('/ABBJavaDev-SpringMVC/')"/>

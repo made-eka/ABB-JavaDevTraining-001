@@ -26,6 +26,11 @@
                 <tr>
                     <td><input type="submit" value="Final Page"/></td>
 			    </tr>
+                <tr>
+                    <td>
+						<input type="button" value="Error" onclick="window.location.assign('/ABBJavaDev-SpringMVC/Guest')"/>
+					</td>
+			    </tr>
 			</table>  
 		</form:form>
 	</table>
