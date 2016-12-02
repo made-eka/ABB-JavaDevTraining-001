@@ -8,14 +8,14 @@
         <link href="${resources}/css/core.css" rel="stylesheet">
     </head>
     <body>
-        <abb_h1>The Final Page</abb_h1><br>
+        <abb_h1>Come On... That's incorrect URL!!</abb_h1><br>
         <abb_h2>${input_message}</abb_h2>
         <table>
             <form:form method="GET" action="/ABBJavaDev-SpringMVC/backPage">
                 <tr>
-                    <td><input type="submit" value="Back Page"/></td>   
+                    <td><input type="submit" value="Back Page"/></td>
                 </tr>
             </form:form>
-        </table>  
+        </table> 
     </body>
 </html>
